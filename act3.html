@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+</head>
+<body>
+  <script>
+    const fakeData = {
+    location: { name: "Pagadian City" },
+    current: {
+      temp_c: 33,
+      condition: {
+        text: "Partly Cloudy",
+      },
+    },
+    };
+// Use destructuring
+const {
+  location: { name },
+  current: {
+    temp_c,
+    condition: { text },
+  },
+} = fakeData;
+console.log(`Weather in ${name}: ${temp_c}°C and ${text}`);
+  </script>
+</body>
+</html>
